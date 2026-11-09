@@ -1,16 +1,25 @@
 #include <iostream>
 
-// Lab 10 — Your Name
+// Lab 10 — Isaiah Salvatierra
 // CIS 5 Week 10 · References & pointers
 
-void swap_values(int& a, int& b) {
-  // TODO
+using std::cout;
+using std::endl;
+
+void swap_values(int& a, int& b) 
+{
+ int t = a; a = b; b = t;
+ 
 }
 
-int main() {
+int main() 
+{
   int x = 3, y = 7;
-  std::cout << "Before: " << x << " " << y << "\n";
-  // TODO: swap_values(x, y);
-  // TODO: pointer walkthrough with int* p = &x;
+  cout << "Before: " << x << " " << y << endl;
+ 
+  swap_values(x, y);
+  cout << "After: " << x << " " << y << endl;
+  int* p = &x;
+  cout << "x via pointer: " << *p << endl;
   return 0;
 }
